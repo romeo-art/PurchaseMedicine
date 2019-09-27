@@ -13,9 +13,11 @@ import java.util.ArrayList;
  */
 public class Pharmacy {
 
+    private ArrayList<Customer> customers = new ArrayList<>();
     private ArrayList<Medicine> medicineList = new ArrayList<>();
     private String id;
     private String name;
+    private String email;
     private String address;
 
     public Pharmacy() {
@@ -89,10 +91,33 @@ public class Pharmacy {
 
     }
 
-    public ArrayList<Medicine> add() {
-        Headache l = new Headache("12315", "Robitussin", "Paracetamol robitussin", (float) 5.0);
-        this.medicineList.add(l);
-        return this.medicineList;
+    public String getEmail() {
+        return email;
+    }
+
+//    public ArrayList<Medicine> add() {
+//        Headache l = new Headache("12315", "Robitussin", "Paracetamol robitussin", (float) 5.0);
+//        this.medicineList.add(l);
+//        return this.medicineList;
+//    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public ArrayList<Customer> getCustomers() {
+        return customers;
+    }
+
+    public void setCustomers(ArrayList<Customer> customers) {
+        this.customers = customers;
+    }
+    
+    public void addCustomer(Customer cus){
+        this.customers.add(cus);
+    }
+    
+    public void register(Customer newCustomer){
+        
     }
 
 }

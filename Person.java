@@ -10,6 +10,7 @@ package PurchasingMedicine;
  * @author lenizoro_sd2022
  */
 public class Person {
+    private String ID;
     private String name;
     private String address;
     private String email;
@@ -17,7 +18,8 @@ public class Person {
     public Person() {
     }
 
-    public Person(String name, String address, String email) {
+    public Person(String id, String name, String address, String email) {
+        this.ID = id;
         this.name = name;
         this.address = address;
         this.email = email;
@@ -47,9 +49,17 @@ public class Person {
         this.email = email;
     }
 
+    public String getID() {
+        return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
     @Override
     public String toString() {
-        return "Person{" + "name=" + name + ", address=" + address + ", email=" + email + '}';
+        return "Person{" + "ID=" + ID + ", name=" + name + ", address=" + address + ", email=" + email + '}';
     }
-    
+
 }

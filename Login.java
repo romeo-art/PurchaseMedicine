@@ -10,6 +10,7 @@ package PurchasingMedicine;
  * @author lenizoro_sd2022
  */
 public interface Login {
+   public void register(Customer newCustomer);
    public void login();
    public void order(Medicine medicine);
    public float calculateTotalAmount();
